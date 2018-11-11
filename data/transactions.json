@@ -1,0 +1,10 @@
+[
+        
+    {"media": "Twitter", "store": "Acme", "state": "NY", "followers": 9.9},
+    {"media": "Instagram", "store": "Big Co.", "state": "NY", "followers": 1.9},
+    {"media": "Youtube", "store": "Acme", "state": "FL", "followers": 18},
+    {"media": "Facebook", "store": "Acme", "state": "NY", "followers": 5.8}
+
+    
+    
+]

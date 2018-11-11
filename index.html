@@ -9,10 +9,79 @@
     <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
     <script type="text/javascript" src="static/js/dc.min.js"></script>
     <script type="text/javascript" src="static/js/queue.min.js"></script>
+    <script type="text/javascript" src="static/js/graph.js"></script>
 
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <h3 class="">Followers</h3>
+        <div id="follower-chart"></div>
+    </div>
+    <div>
+        <h3 class="">Followers</h3>
+        <div id="per-person-chart"></div>
+    </div>
+     <div>
+        <h3 class="">Followers</h3>
+        <div id="per-person-chart-gender"></div>
+    </div>
+
+    <script>
+       queue()
+           .defer(d3.json, "data/transactions.json")
+           .await(makeGraphs);
     
+       function makeGraphs(error, transactionsData) {
+            var ndx = crossfilter(transactionsData);
+            var name_dim = ndx.dimension(dc.pluck('media'));
+            var total_spend_per_person = name_dim.group().reduceSum(dc.pluck('followers'));
+           
+            dc.barChart('#follower-chart')
+                .width(500)
+                .height(300)
+                .margins({top: 10, right: 50, bottom: 30, left: 100})
+                .dimension(name_dim)
+                .group(total_spend_per_person)
+                .transitionDuration(100)
+                .x(d3.scale.ordinal())
+                .xUnits(dc.units.ordinal)
+                .xAxisLabel("")
+                .yAxisLabel('Followers')
+                
+                
+            var name_dim = ndx.dimension(dc.pluck('media'));
+            var total_spend_per_person = name_dim.group().reduceSum(dc.pluck('followers'));
+            dc.pieChart('#per-person-chart')
+                .height(330)
+                .radius(90)
+                .transitionDuration(1500)
+                .dimension(name_dim)
+                .group(total_spend_per_person);
+        
+                
+            dc.renderAll();
+            
+        
+       }
+   
+     
+            var transactionsData = [
+            {"gender": "male", "store": "Acme", "state": "NY", "percenatge": 42},
+            {"gender": "female", "store": "Big Co.", "state": "NY", "percenatge": 68},
+          
+        ];
+        var ndx = crossfilter(transactionsData);
+        var name_dim = ndx.dimension(dc.pluck('gender'));
+        var total_spend_per_person = name_dim.group().reduceSum(dc.pluck('percenatge'));
+        dc.pieChart('#per-person-chart-gender')
+                .height(330)
+                .radius(90)
+                .transitionDuration(1500)
+                .dimension(name_dim)
+                .group(total_spend_per_person);
+            dc.renderAll();
+   
+    </script>
 </body>
 </html>
