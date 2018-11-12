@@ -1,0 +1,86 @@
+[
+  {
+    "date": "17-01-01",
+    "subsrcibersGained": 55643,
+    "totalSubscribers": 4061626,
+    "viewsGained": 2929762,
+    "totalVIews": 12929762
+  },
+  {
+    "date": "17-02-01",
+    "subsrcibersGained": 94641,
+    "totalSubscribers": 4156267,
+    "viewsGained": 2209702,
+    "totalVIews": 15139464
+  },
+  {
+    "date": "17-03-01",
+    "subsrcibersGained": 88700,
+    "totalSubscribers": 4244967,
+    "viewsGained": 2185023,
+    "totalVIews": 17324487
+  },
+  {
+    "date": "17-04-01",
+    "subsrcibersGained": 97281,
+    "totalSubscribers": 4342248,
+    "viewsGained": 4457288,
+    "totalVIews": 21781775
+  },
+  {
+    "date": "17-05-01",
+    "subsrcibersGained": 91849,
+    "totalSubscribers": 4434097,
+    "viewsGained": 7959427,
+    "totalVIews": 29741202
+  },
+  {
+    "date": "17-06-01",
+    "subsrcibersGained": 95654,
+    "totalSubscribers": 4529751,
+    "viewsGained": 4642263,
+    "totalVIews": 34383465
+  },
+  {
+    "date": "17-07-01",
+    "subsrcibersGained": 103255,
+    "totalSubscribers": 4633006,
+    "viewsGained": 3809975,
+    "totalVIews": 38193440
+  },
+  {
+    "date": "17-08-01",
+    "subsrcibersGained": 109246,
+    "totalSubscribers": 4742252,
+    "viewsGained": 8534679,
+    "totalVIews": 46728119
+  },
+  {
+    "date": "17-09-01",
+    "subsrcibersGained": 106021,
+    "totalSubscribers": 4848273,
+    "viewsGained": 4611306,
+    "totalVIews": 51339425
+  },
+  {
+    "date": "17-10-01",
+    "subsrcibersGained": 88843,
+    "totalSubscribers": 4937116,
+    "viewsGained": 2608379,
+    "totalVIews": 53947804
+  },
+  {
+    "date": "17-11-01",
+    "subsrcibersGained": 107688,
+    "totalSubscribers": 5044804,
+    "viewsGained": 8551403,
+    "totalVIews": 62499207
+  },
+  {
+    "date": "17-12-01",
+    "subsrcibersGained": 100682,
+    "totalSubscribers": 5145486,
+    "viewsGained": 4749278,
+    "totalVIews": 67248485
+  }
+]

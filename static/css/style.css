@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Quicksand:100,200,300,400,500,600,700');
+
+
+/*........................................Avatar*/
+.avatar {
+    vertical-align: middle;
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    border: 5px solid #ff594938;
+    margin-top: 20px;
+}
+
+.name-title{
+    font-family: 'Indie FLower'
+   
+    
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #21100e;
+    
+}
