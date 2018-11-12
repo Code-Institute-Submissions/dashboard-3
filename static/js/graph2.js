@@ -9,7 +9,7 @@ queue()
             d.date = parseDate(d.date);
         });
         var date_dim = ndx.dimension(dc.pluck('date'));
-        var total_spend_per_date = date_dim.group().reduceSum(dc.pluck('totalVIews'));
+        var total_views = date_dim.group().reduceSum(dc.pluck('totalVIews'));
         var minDate = date_dim.bottom(1)[0].date;
         var maxDate = date_dim.top(1)[0].date;
         
@@ -18,7 +18,7 @@ queue()
             .height(300)
             .margins({top: 10, right: 50, bottom: 30, left: 100})
             .dimension(date_dim)
-            .group(total_spend_per_date)
+            .group(total_views)
             .transitionDuration(1000)
             .x(d3.time.scale().domain([minDate,maxDate]))
             .y(d3.scale.linear().domain([10000000,67248485]))

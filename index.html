@@ -62,20 +62,20 @@
             
             <script>
                  var genderData = [
-                {"gender": "male", "store": "Acme", "state": "NY", "percenatge": 42},
-                {"gender": "female", "store": "Big Co.", "state": "NY", "percenatge": 68},
+                {"gender": "male", "percenatge": 42},
+                {"gender": "female", "percenatge": 68},
               
                  ];
                 var adx = crossfilter(genderData);
                 
-                var name_dim = adx.dimension(dc.pluck('gender'));
-                var total_spend_per_person = name_dim.group().reduceSum(dc.pluck('percenatge'));
+                var gender_dim = adx.dimension(dc.pluck('gender'));
+                var gender_ratio = gender_dim.group().reduceSum(dc.pluck('percenatge'));
                 dc.pieChart('#per-person-chart-gender')
                         .height(330)
                         .radius(90)
                         .transitionDuration(1500)
-                        .dimension(name_dim)
-                        .group(total_spend_per_person);
+                        .dimension(gender_dim)
+                        .group(gender_ratio);
                     dc.renderAll();
         
                 
