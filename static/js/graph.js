@@ -2,11 +2,11 @@ queue()
    .defer(d3.json, "data/socials.json")
    .await(makeGraphs);
     
-    function makeGraphs(error, socialsData) {
+function makeGraphs(error, socialsData) {
         var ndx = crossfilter(socialsData);
        
         showing_social_followers(ndx);
-        showing_followers_pie(ndx)
+        showing_followers_pie(ndx);
         
         dc.renderAll();
 
@@ -39,3 +39,4 @@ function showing_followers_pie(ndx){
             .dimension(name_dim)
             .group(total_followers_per_media);
 }
+

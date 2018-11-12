@@ -1,0 +1,5 @@
+[
+    {"gender": "male", "store": "Acme", "state": "NY", "percenatge": 42},
+    {"gender": "female", "store": "Big Co.", "state": "NY", "percenatge": 68},
+    
+]
