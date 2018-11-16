@@ -23,7 +23,7 @@ queue()
             .x(d3.time.scale().domain([minDate,maxDate]))
             .y(d3.scale.linear().domain([10000000,67248485]))
             .xAxisLabel("Month")
-            .yAxis().ticks(5);
+            .yAxisLabel('Views')
             
         var name_dim = ndx.dimension(dc.pluck('date'));
         var total_spend_per_person = name_dim.group().reduceSum(dc.pluck('subsrcibersGained'));

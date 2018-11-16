@@ -7,6 +7,7 @@ function makeGraphs(error, socialsData) {
        
         showing_social_followers(ndx);
         showing_followers_pie(ndx);
+       
         
         dc.renderAll();
 
@@ -27,6 +28,7 @@ function showing_social_followers(ndx){
         .xUnits(dc.units.ordinal)
         .xAxisLabel("")
         .yAxisLabel('Followers (millions)');
+        
 }
 
 function showing_followers_pie(ndx){

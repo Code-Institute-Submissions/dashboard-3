@@ -17,8 +17,8 @@
     <style>
          path.line {
          fill: none;
-         stroke: blue;
-         stroke-width: 1.5px;
+         stroke: red;
+         stroke-width: 4.5px;
          }
          
          
@@ -28,7 +28,7 @@
 <body class="container-fluid-auto">
     
     <div>
-         <h1 class="text-center name-title">Lily Singh</h1>
+         <h1 class="text-center name-title">Lily Singh's Socials</h1>
         <div class="row text-center"><img src="static/Images/Lily-Singh.jpg" alt="Avatar" class="avatar"></div>
         
         <div class="block-divider"></div>
@@ -39,7 +39,7 @@
     <div class="row">
         <div class="text-center col-lg-6 col-md-6 col-sm-12">
             <img src="static/Images/youtube-log.png" alt="Avatar" class="avatar-icon">
-            <h2>9.4m</h2>
+            <h2>9.4m</h2><h8>YouTube Subscribers</h8>
         </div>
         <div class="text-center col-lg-6 col-md-6 col-sm-12">
             <img src="static/Images/all.png" alt="Avatar" class="avatar-icon2">
@@ -51,15 +51,14 @@
         
     <div class="row">
         <h2>Subscribers</h2>
-        <div id="follower-bar-chart"></div>
+        <div id="follower-bar-chart" class="border-width"></div>
     </div>
         
     <div class="row">
         
         <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-            <h3>Gender Ratio</h3>
+            <h3>Follower's Gender Ratio</h3>
             <div id="per-person-chart-gender"></div>
-            
             <script>
                  var genderData = [
                 {"gender": "male", "percenatge": 42},
@@ -80,26 +79,23 @@
         
                 
             </script>
-            
-            
-            
         </div>
         
         <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-            <h3>Social Platforms</h3>  
+            <h3>Social Platforms Ratio</h3>  
             <div id="follers-pie-chart"></div>
         </div>
         
     </div>
     
     <div class="row">
-        <h3>Total Views</h3>    
+        <h3>Total Youtube Views 2017</h3>    
             <div id="view-line-chart"></div>
         
     </div>
     
     <div class="row">
-        <h3>Subscriber Growth 2017</h3>  
+        <h3>Youtube Subscriber Growth 2017</h3>  
         <div id="my-bar-chart"></div>
         
     </div>  
