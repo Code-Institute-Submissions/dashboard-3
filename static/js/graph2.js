@@ -26,7 +26,7 @@ queue()
             .yAxisLabel('Views')
             
         var name_dim = ndx.dimension(dc.pluck('date'));
-        var total_spend_per_person = name_dim.group().reduceSum(dc.pluck('subsrcibersGained'));
+        var total_bar = name_dim.group().reduceSum(dc.pluck('subsrcibersGained'));
         var minDate = date_dim.bottom(1)[0].date;
         var maxDate = date_dim.top(1)[0].date;
         
@@ -35,7 +35,7 @@ queue()
                 .height(300)
                 .margins({top: 10, right: 50, bottom: 50, left: 100})
                 .dimension(name_dim)
-                .group(total_spend_per_person)
+                .group(total_bar)
                 .transitionDuration(100)
                 .x(d3.scale.ordinal())
                 .xUnits(dc.units.ordinal)
@@ -44,4 +44,3 @@ queue()
                 
         dc.renderAll();
     }
-   
